@@ -1,6 +1,6 @@
-📺 TV Show Search
-A simple TV show search app built with vanilla HTML, CSS, and JavaScript, using the TVMaze API.
-
+# 📺 TV Show Search
+Search for any TV show and pull up its details, built with vanilla HTML, CSS, and JavaScript using the TVMaze API.
+ 
 🔗 [Live Demo](https://adamkirikisla.github.io/show-search-tvmaze/)
 
 Features
