@@ -10,6 +10,7 @@ const searchInput = document.querySelector('#searchInput')
 const clearSearch = () => results.innerHTML = ''
 
 
+// Forms Logic
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -20,6 +21,7 @@ form.addEventListener('submit', async function (e) {
         clearSearch();
         const response = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`);
         movieImage(response.data);
+        console.log(response.data);
     }
 
     catch (error) {
@@ -37,7 +39,17 @@ const movieImage = (shows) => {
 
         const img = document.createElement('img');
         img.src = i.show.image.medium;
+
+        img.classList.add("imgCard");
+
         results.append(img);
+
+        img.addEventListener('click', () => {
+            window.location.href = `detail.html?id=${i.show.id}`;
+
+        })
+
 
     }
 }
+

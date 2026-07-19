@@ -4,32 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Show Search</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
-
-    <h1>TV Show Seach</h1>
-
-    <main class="mainSection">
-        <form action="" id="searchForm">
-            <input type="text" placeholder="TV Show Seach" name="query" id="searchInput">
-            <button type="submit">Search</button>
-        </form>
-
-        <section class="results"> </section>
-
-
+    <main class="detailSection">
+        <h1 id="showName"></h1>
+        <img id="showImage" src="">
+        <p id="showSummary"></p>
+        <p id="showStatus"></p>
+        <p id="showRating"></p>
     </main>
 
+
     <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
-    <script src="app.js"></script>
+    <script src="detail.js"></script>
 </body>
 
 </html>
