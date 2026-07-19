@@ -1,4 +1,3 @@
-const mainSection = document.querySelector(".mainSection");
 const results = document.querySelector('.results');
 
 const form = document.querySelector("#searchForm")

@@ -27,7 +27,7 @@ h1 {
     color: #f1f1f1;
 }
 
-button {
+button[type="submit"] {
     padding: 0.5rem 1rem;
     border-radius: 6px;
     border: none;
@@ -36,7 +36,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background: #14b8a6;
 }
 
@@ -71,4 +71,67 @@ button:hover {
     transform: scale(1.1);
     border-color: turquoise;
 
+}
+
+/* Detail Section */
+.detailSection {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#showImage {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    align-self: center;
+}
+
+#showSummary {
+    color: #a0a0a0;
+    /* softer gray instead of full white */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#showName {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#returnButton {
+    display: flex;
+    height: 3em;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2dd4bf;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+}
+
+#returnButton:hover {
+    box-shadow: 0 4px 12px rgba(45, 212, 191, 0.4);
+    transform: translateY(-2px);
+    background-color: #14b8a6;
+}
+
+@media (max-width: 600px) {
+    .results {
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+
+
+    }
 }

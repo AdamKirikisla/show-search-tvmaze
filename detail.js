@@ -10,7 +10,14 @@ async function loadShowDetails() {
         document.getElementById('showImage').src = show.image ? show.image.medium : '';
         document.getElementById('showSummary').innerHTML = show.summary;
         document.getElementById('showStatus').textContent = `Status: ${show.status}`;
-        document.getElementById('showRating').textContent = `Rating: ${show.rating.average} / 10`;
+        const rating = document.getElementById('showRating');
+
+        if (show.rating.average === null) {
+            rating.textContent = 'Rating: N/A';
+        } else {
+            rating.textContent = `Rating: ${show.rating.average} / 10`;
+        }
+
     }
     catch (error) {
         console.log("Something went wrong:", error);
@@ -18,6 +25,11 @@ async function loadShowDetails() {
 }
 
 loadShowDetails();
+
+// Return button Logic
+document.getElementById("returnButton").addEventListener('click', () => {
+    window.location.href = "index.html";
+})
 
 //Layman Notes
 // The URL after clicking looks like: detail.html?id=169
